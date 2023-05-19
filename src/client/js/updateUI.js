@@ -33,7 +33,9 @@ const updateUI = (data) => {
     ironyRes.firstElementChild.textContent = 'Ironic: ';
     ironyRes.appendChild(getImg(irony));
 
-    document.getElementById('confidence').setAttribute('value', confidence);
+    const confidenceRes = document.getElementById('confidence');
+    confidenceRes.setAttribute('value', confidence);
+    confidenceRes.previousElementSibling.textContent = `Confidence: ${confidence}`;
 };
 
 export {
