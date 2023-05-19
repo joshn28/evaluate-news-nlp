@@ -1,0 +1,34 @@
+$bg-color: #f1f1f1
+
+section
+    display: flex
+    width: min-content
+    margin: 20px auto 0
+    background-color: $bg-color
+    padding: 20px
+    border-radius: 5px
+    flex-direction: column
+    align-items: center
+
+    h2
+        margin-top: 0
+
+    .results
+        display: flex
+        gap: 0 5px
+
+    div
+        img
+            width: 30px
+            height: auto
+
+progress
+    /* Reset the default appearance */
+    -webkit-appearance: none
+    appearance: none
+
+    width: 250px
+    height: 20px
+
+progress[value]::-webkit-progress-bar
+    background-color: $bg-color
