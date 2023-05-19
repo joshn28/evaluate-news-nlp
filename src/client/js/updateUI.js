@@ -22,15 +22,15 @@ const updateUI = (data) => {
     document.getElementById('score').textContent = `Score: ${score_tag}`;
 
     const agreementRes = document.getElementById('agreement');
-    agreementRes.firstElementChild.textContent = 'Agreement: ';
+    agreementRes.firstElementChild.textContent = 'Agreement';
     agreementRes.appendChild(getImg(agreement));
 
     const subjectivityRes = document.getElementById('subjectivity');
-    subjectivityRes.firstElementChild.textContent = 'Subjective: ';
+    subjectivityRes.firstElementChild.textContent = 'Subjective';
     subjectivityRes.appendChild(getImg(subjectivity));
 
     const ironyRes = document.getElementById('irony');
-    ironyRes.firstElementChild.textContent = 'Ironic: ';
+    ironyRes.firstElementChild.textContent = 'Ironic';
     ironyRes.appendChild(getImg(irony));
 
     const confidenceRes = document.getElementById('confidence');
