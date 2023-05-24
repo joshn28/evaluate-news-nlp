@@ -12,9 +12,11 @@ document.getElementById('submit').addEventListener('click', evt => {
 
     const content = evt.target.previousElementSibling.value;
 
-    getKey()
-    .then(key => getAnalysis(key, content))
-    .then(function(data) {
-        updateUI(data);
-    });
+    if (content) {
+        getKey()
+        .then(key => getAnalysis(key, content))
+        .then(function(data) {
+            updateUI(data);
+        });
+    }
 });
