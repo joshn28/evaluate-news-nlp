@@ -16,7 +16,7 @@ const getIcon = result => {
 };
 
 // Render the text and the icon
-function updateResult(elementId, value, text) {
+const updateResult = (elementId, value, text) => {
     const element = document.getElementById(elementId);
     element.firstElementChild.textContent = text;
 
@@ -32,7 +32,7 @@ function updateResult(elementId, value, text) {
   }
 
 // Update the UI based on the values from the received data
-const updateUI = (data) => {
+const updateUI = data => {
     const { score_tag, agreement, subjectivity, confidence, irony } = data;
 
     const results = document.querySelector('section');
