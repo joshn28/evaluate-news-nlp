@@ -23,13 +23,13 @@ const updateResult = (elementId, value, text) => {
     const icon = getIcon(value);
     icon.classList.add('hidden');
 
-    // Remove previous icon rendered previously
+    // Remove icon rendered previously
     if (element.lastChild.tagName === 'IMG') {
         element.lastChild.remove();
     }
 
     element.appendChild(icon);
-  }
+};
 
 // Update the UI based on the values from the received data
 const updateUI = data => {
@@ -66,5 +66,7 @@ const updateUI = data => {
 };
 
 export {
-    updateUI
+    updateUI,
+    updateResult,
+    getIcon
 };
