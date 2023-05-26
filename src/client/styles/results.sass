@@ -3,7 +3,7 @@ $bg-color: #f1f1f1
 section
     display: flex
     width: min-content
-    margin: 20px auto 0
+    margin: 20px auto
     background-color: $bg-color
     padding: 20px
     border-radius: 5px
@@ -12,6 +12,7 @@ section
 
     h2
         margin-top: 0
+        margin-bottom: 0
 
     .results
         display: flex
@@ -30,5 +31,5 @@ progress
     width: 250px
     height: 20px
 
-progress[value]::-webkit-progress-bar
-    background-color: $bg-color
+.hidden
+    visibility: hidden

@@ -1,4 +1,6 @@
 @import 'base'
+
+$border-radius: 5px
     
 textarea,
 button
@@ -15,14 +17,17 @@ button
     margin: 0 auto
     background-color: black
     color: white
-    padding: 5px 20px
+    padding: 10px 20px
     border: none
-    border-radius: 5px
+    border-radius: $border-radius
     cursor: pointer
     outline: inherit
     font-weight: bold
 
 textarea
     padding: 10px
-    resize: none
+    resize: vertical
+    height: 20vh
     overflow-y: auto
+    border: 1px solid black
+    border-radius: $border-radius
