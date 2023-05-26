@@ -49,20 +49,6 @@ const updateUI = data => {
     const confidenceRes = document.getElementById('confidence');
     confidenceRes.setAttribute('value', confidence);
     confidenceRes.previousElementSibling.textContent = `Confidence: ${confidence}`;
-
-    results.addEventListener('animationend', () => {
-        const values = ['agreement', 'subjectivity', 'irony'];
-
-        for (const val of values) {
-            const element = document.getElementById(val);
-            const icon = element.lastElementChild;
-
-            icon.classList.remove('hidden');
-            icon.classList.add('animate__animated', 'animate__bounceIn');
-        }
-
-        results.classList.remove('animate__animated', 'animate__fadeInDown');
-    });
 };
 
 export {

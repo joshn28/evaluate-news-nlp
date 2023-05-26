@@ -7,6 +7,10 @@ import '../client/styles/form.sass'
 import '../client/styles/results.sass'
 import '../client/styles/footer.sass'
 
+import logo from '../client/assets/logo.png';
+
+document.getElementById('logo').setAttribute('src', logo);
+
 document.getElementById('submit').addEventListener('click', evt => {
     evt.preventDefault();
 
@@ -19,4 +23,18 @@ document.getElementById('submit').addEventListener('click', evt => {
             updateUI(data);
         });
     }
+});
+
+document.querySelector('section').addEventListener('animationend', () => {
+    const values = ['agreement', 'subjectivity', 'irony'];
+
+    for (const val of values) {
+        const element = document.getElementById(val);
+        const icon = element.lastElementChild;
+
+        icon.classList.remove('hidden');
+        icon.classList.add('animate__animated', 'animate__bounceIn');
+    }
+
+    results.classList.remove('animate__animated', 'animate__fadeInDown');
 });
