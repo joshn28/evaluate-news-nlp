@@ -7,10 +7,6 @@ import '../client/styles/form.sass'
 import '../client/styles/results.sass'
 import '../client/styles/footer.sass'
 
-import logo from '../client/assets/logo.png';
-
-document.getElementById('logo').setAttribute('src', logo);
-
 document.getElementById('submit').addEventListener('click', evt => {
     evt.preventDefault();
 
@@ -22,6 +18,8 @@ document.getElementById('submit').addEventListener('click', evt => {
         .then(function(data) {
             updateUI(data);
         });
+    } else {
+        alert('Field cannot be blank');
     }
 });
 
@@ -36,5 +34,5 @@ document.querySelector('section').addEventListener('animationend', () => {
         icon.classList.add('animate__animated', 'animate__bounceIn');
     }
 
-    results.classList.remove('animate__animated', 'animate__fadeInDown');
+    this.classList.remove('animate__animated', 'animate__fadeInDown');
 });
