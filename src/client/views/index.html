@@ -5,8 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evaluate a News Article with NLP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
-    <h1>Hello World</h1>
+    <main>
+        <h1 class="animate__animated animate__fadeInDown">Evaluate a News Article with Natural Language Processing</h1>
+        <form>
+            <label for="content">Enter a news article:</label>
+            <textarea name="content" id="content" rows="7"></textarea>
+            <button type="button" id="submit">Submit</button>
+        </form>
+
+        <section class="hidden">
+            <h2>Results:</h2>
+            <p id="score"></p>
+            <div id="agreement" class="results">
+                <p></p>
+            </div>
+            <div id="subjectivity" class="results">
+                <p></p>
+            </div>
+            <div id="irony" class="results">
+                <p></p>
+            </div>
+            <div>
+                <p></p>
+                <progress id="confidence" max="100"></progress>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© Joshua Nobleza 2023</p>
+    </footer>
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
 </body>
 </html>
