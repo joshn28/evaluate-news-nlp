@@ -28,4 +28,3 @@ const server = app.listen(port, () => {
 app.get('/key', (req, res) => {
     res.send({ apiKey: process.env.API_KEY });
 });
-
