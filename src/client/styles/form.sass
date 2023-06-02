@@ -12,22 +12,37 @@ form
     margin: 0 auto
     gap: 20px 0
 
-button
-    width: max-content
-    margin: 0 auto
-    background-color: black
-    color: white
-    padding: 10px 20px
-    border: none
-    border-radius: $border-radius
-    cursor: pointer
-    outline: inherit
-    font-weight: bold
+    button
+        width: max-content
+        margin: 0 auto
+        background-color: black
+        color: white
+        padding: 10px 20px
+        border: none
+        border-radius: $border-radius
+        cursor: pointer
+        outline: inherit
+        font-weight: bold
 
-textarea
-    padding: 10px
-    resize: vertical
-    height: 20vh
-    overflow-y: auto
-    border: 1px solid black
-    border-radius: $border-radius
+    textarea
+        padding: 10px
+        resize: vertical
+        height: 15vh
+        overflow-y: auto
+        border: 1px solid rgb(148, 163, 184)
+        border-radius: $border-radius
+
+        &:focus-visible
+            outline: none
+
+        &:invalid
+            border-color: rgb(239, 68, 68)
+
+    span
+        position: absolute
+        bottom: 40px
+        color: rgb(239, 68, 68)
+        font-size: 12px
+
+.invalid
+    border-color: rgb(239, 68, 68)
