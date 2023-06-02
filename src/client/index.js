@@ -3,14 +3,24 @@ import { getKey } from './js/getKey'
 import { updateUI } from './js/updateUI'
 
 import '../client/styles/base.sass'
+import '../client/styles/header.sass'
 import '../client/styles/form.sass'
 import '../client/styles/results.sass'
 import '../client/styles/footer.sass'
 
+import logo from '../client/assets/logo.png'
+
+document.getElementById('logo').setAttribute('src', logo);
+
+document.querySelector('textarea').addEventListener('change', () => {
+    document.querySelector('textarea').classList.remove('invalid');
+    document.querySelector('span').classList.add('hidden');
+});
+
 document.getElementById('submit').addEventListener('click', evt => {
     evt.preventDefault();
 
-    const content = evt.target.previousElementSibling.value;
+    const content = document.querySelector('textarea').value;
 
     if (content) {
         getKey()
@@ -19,7 +29,8 @@ document.getElementById('submit').addEventListener('click', evt => {
             updateUI(data);
         });
     } else {
-        alert('Field cannot be blank');
+        document.querySelector('textarea').classList.add('invalid');
+        document.querySelector('span').classList.remove('hidden');
     }
 });
 
