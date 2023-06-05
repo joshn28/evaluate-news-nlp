@@ -28,23 +28,24 @@ module.exports = {
             },
             {
                 test: /\.sass$/,
-                use: [ 'style-loader', 'css-loader', 'sass-loader' ]
-            }
+                use: [ 'style-loader', 'css-loader', 'sass-loader' ],
+            },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
+            },
         ],
     },
     plugins: [
+        new CleanWebpackPlugin({
+            dry: true,
+            verbose: true,
+            cleanStaleWebpackAssets: false,
+            protectWebpackAssets: false,
+        }),
         new htmlWebPackPlugin({
             template: "./src/client/views/index.html",
             filename: "./index.html",
-        }),
-        new CleanWebpackPlugin({
-            // Simulate the removal of files
-            dry: true,
-            // Write Logs to Console
-            verbose: true,
-            // Automatically remove all unused webpack assets on rebuild
-            cleanStaleWebpackAssets: true,
-            protectWebpackAssets: false
         })
     ]
 }
