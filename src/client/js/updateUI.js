@@ -46,7 +46,7 @@ const updateUI = data => {
     const results = document.querySelector('section');
     results.classList.add('hidden');
     results.classList.remove('hidden');
-    results.classList.add('animate__animated', 'animate__fadeInDown');
+    results.classList.add('animate__animated', 'animate__fadeInUp');
 
     document.getElementById('score').textContent = `Polarity: ${score_tag} (${polarity[score_tag]})`;
 

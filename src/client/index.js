@@ -45,5 +45,5 @@ document.querySelector('section').addEventListener('animationend', () => {
         icon.classList.add('animate__animated', 'animate__bounceIn');
     }
 
-    document.querySelector('section').classList.remove('animate__animated', 'animate__fadeInDown');
+    document.querySelector('section').classList.remove('animate__animated', 'animate__fadeInUp');
 });
