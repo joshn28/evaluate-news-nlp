@@ -4,6 +4,8 @@ A web tool that allows users to run Natural Language Processing (NLP) on article
 
 # Quickstart/Demo
 
+![chrome_SKnp4HD7FM](https://github.com/joshn28/evaluate-news-nlp/assets/50343790/302a07bb-b9ff-4cfd-9327-501b8c1141df)
+
 # Table of Contents
 
 - [Evaluate a news article with Natural Language Processing](#evaluate-a-news-article-with-natural-language-processing)
