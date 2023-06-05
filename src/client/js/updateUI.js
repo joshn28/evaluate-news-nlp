@@ -34,13 +34,21 @@ const updateResult = (elementId, value, text) => {
 // Update the UI based on the values from the received data
 const updateUI = data => {
     const { score_tag, agreement, subjectivity, confidence, irony } = data;
+    const polarity = {
+        'P+': 'strong positive',
+        'P' : 'positive',
+        'NEU': 'neutral',
+        'N': 'negative',
+        'N+': 'strong negative',
+        'NONE': 'without polarity'
+    };
 
     const results = document.querySelector('section');
     results.classList.add('hidden');
     results.classList.remove('hidden');
     results.classList.add('animate__animated', 'animate__fadeInDown');
 
-    document.getElementById('score').textContent = `Score: ${score_tag}`;
+    document.getElementById('score').textContent = `Polarity: ${score_tag} (${polarity[score_tag]})`;
 
     updateResult('agreement', agreement, 'Agreement');
     updateResult('subjectivity', subjectivity, 'Subjective');
