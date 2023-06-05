@@ -5,14 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evaluate a News Article with NLP</title>
+    <link rel="icon" href="https://www.systemuicons.com/images/icons/newspaper.svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
+    <header>
+        <img id="logo" alt="logo">
+    </header>
     <main>
-        <h1 class="animate__animated animate__fadeInDown">Evaluate a News Article with Natural Language Processing</h1>
-        <form>
-            <label for="content">Enter a news article:</label>
-            <textarea name="content" id="content" rows="7"></textarea>
+        <h1 class="animate__animated animate__fadeInLeft">Evaluate a News Article with Natural Language Processing</h1>
+        <form class="animate__animated animate__fadeInUpBig animate__delay-1s">
+            <label for="content">Enter a news article or blog:</label>
+            <textarea name="content" id="content"></textarea>
+            <span class="hidden">This field cannot be blank.</span>
             <button type="button" id="submit">Submit</button>
         </form>
 
@@ -31,6 +36,9 @@
             <div>
                 <p></p>
                 <progress id="confidence" max="100"></progress>
+            </div>
+            <div>
+                <p></p>
             </div>
         </section>
     </main>
