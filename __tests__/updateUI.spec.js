@@ -37,7 +37,7 @@ describe('Testing the UpdateUI function', () => {
 
         updateUI(fakeData);
 
-        expect(document.getElementById('score').textContent).toBe('Score: P+');
+        expect(document.getElementById('score').textContent).toBe('Polarity: P+ (strong positive)');
         expect(document.getElementById('agreement').firstElementChild.textContent).toBe('Agreement');
         expect(document.getElementById('subjectivity').firstElementChild.textContent).toBe('Subjective');
         expect(document.getElementById('irony').firstElementChild.textContent).toBe('Ironic');
